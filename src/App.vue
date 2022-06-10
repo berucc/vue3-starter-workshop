@@ -1,5 +1,5 @@
 <script setup>
-console.log("Setup App.vue");
+console.log('Setup App.vue')
 </script>
 
 <template>
@@ -7,7 +7,7 @@ console.log("Setup App.vue");
 </template>
 
 <style>
-@import "./assets/base.css";
+@import './assets/base.css';
 
 #app {
   max-width: 1280px;
