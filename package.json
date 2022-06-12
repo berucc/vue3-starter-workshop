@@ -6,22 +6,47 @@
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "exercises": "jest exercises/"
   },
   "prettier": {
     "semi": false,
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest",
+      "^.+\\.vue$": "@vue/vue3-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "testEnvironment": "jsdom",
+    "testEnvironmentOptions": {
+      "customExportConditions": [
+        "node",
+        "node-addons"
+      ]
+    }
+  },
   "dependencies": {
     "vue": "^3.2.36"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
     "@rushstack/eslint-patch": "^1.1.0",
     "@vitejs/plugin-vue": "^2.3.3",
     "@vue/eslint-config-prettier": "^7.0.0",
+    "@vue/test-utils": "^2.0.0",
+    "@vue/vue3-jest": "^28.0.0",
+    "babel-jest": "^28.1.1",
     "eslint": "^8.5.0",
     "eslint-plugin-vue": "^8.2.0",
+    "jest": "^28.1.1",
+    "jest-environment-jsdom": "^28.1.1",
+    "jsdom": "^19.0.0",
     "prettier": "^2.5.1",
     "vite": "^2.9.9"
   }

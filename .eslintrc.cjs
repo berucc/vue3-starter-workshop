@@ -9,6 +9,7 @@ module.exports = {
     '@vue/eslint-config-prettier',
   ],
   env: {
+    jest: true,
     'vue/setup-compiler-macros': true,
   },
 }
